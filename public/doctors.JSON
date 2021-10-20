@@ -1,0 +1,38 @@
+[
+  {
+    "id": "D01",
+    "name": "Dr. Md. Golam Mostafa",
+    "img": "https://media.istockphoto.com/photos/doctor-wears-mask-while-talking-to-patient-picture-id1263930311?k=20&m=1263930311&s=612x612&w=0&h=ymiDi8CmLg0dFYK5vl6EMsbi2tlfxO44eL2s6nHD9II=",
+    "details": "MBBS (DU), DTM & H ( England), AMC, MCQ (Australia)"
+  },
+  {
+    "id": "D02",
+    "name": "Dr. Shamsun Nahar",
+    "img": "https://media.istockphoto.com/photos/portrait-of-a-female-doctor-wearing-protective-face-mask-picture-id1334661825?k=20&m=1334661825&s=612x612&w=0&h=cNKvOVefP5DN4d6Cf752ePutXFKugKC6uceQ3pol6kU=",
+    "details": "MBBS, MD (Cardiology), D-card(DMC) DTM MCQ(USA) "
+  },
+  {
+    "id": "D03",
+    "name": "Prof. Dr. Siddiqur Rahman",
+    "img": "https://media.istockphoto.com/photos/male-nurse-at-work-picture-id1303392275?k=20&m=1303392275&s=612x612&w=0&h=_1gUYNxZBCpHslWkG2_MCl18n2QzNN3vv8dJjYMrXBs=",
+    "details": "MBBS (Dhaka), D-Card (D.U) M.D (Cardiology)"
+  },
+  {
+    "id": "D04",
+    "name": "Dr. Farhana Yesmin",
+    "img": "https://media.istockphoto.com/photos/portrait-of-a-female-medical-doctor-picture-id1301654746?k=20&m=1301654746&s=612x612&w=0&h=SDCgHR4nKdLeMm6WtafKuoQmN0m8FbVZVZURUfpJCHw=",
+    "details": "MBBS, BCS(Health), FCPS(Surgery)"
+  },
+  {
+    "id": "D05",
+    "name": "Dr. Md.Monsurul Haque",
+    "img": "https://media.istockphoto.com/photos/medical-team-picture-id590613602?k=20&m=590613602&s=612x612&w=0&h=nKy-nk8FPfJ8xfE1YdQVMzoxpYBA380Jt8ttxKJ-Uf4=",
+    "details": "MBBS, FCPS(Medicine), MD (Cardiology)"
+  },
+  {
+    "id": "D06",
+    "name": "Dr. Sufia Jannat",
+    "img": "https://media.istockphoto.com/photos/two-female-frontline-workers-in-hospital-during-pandemic-picture-id1293373233?k=20&m=1293373233&s=612x612&w=0&h=gA2pGSlsPhNS5JXq75r_0n2OqKnQUjxi655xBigHzzo=",
+    "details": "MBBS, MD (Cardiology), USMLE (USA)"
+  }
+]
