@@ -16,7 +16,7 @@ const Header = () => {
         expand="lg"
       >
         <Container>
-          <Navbar.Brand href="#home">Daily Care</Navbar.Brand>
+          <Navbar.Brand href="#home">Daily Care Hospital </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Nav.Link as={Link} to="/home">
