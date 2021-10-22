@@ -3,11 +3,14 @@ import useFirebase from "./../../Hooks/useFirebase";
 
 const Login = () => {
   const {
+    error,
     loginWithGoogle,
     user,
     formClickHandeler,
     emailHandeler,
     passwordHandeler,
+    haveAnAccount,
+    isloginchack,
   } = useFirebase();
 
   // console.log(user.email);
@@ -16,7 +19,7 @@ const Login = () => {
     <div className="mt-5">
       {!user.displayName ? (
         <div>
-          <h1>Please Login First</h1>
+          <h1>{isloginchack ? "Please LogIn." : "Please Registered"}</h1>
           <div className="container">
             <div className="m-5">
               <form onSubmit={formClickHandeler}>
@@ -54,8 +57,27 @@ const Login = () => {
                     />
                   </div>
                 </div>
+                <div className="row mb-3">
+                  <div className="col-sm-10 offset-sm-2">
+                    <div className="form-check">
+                      <input
+                        onClick={haveAnAccount}
+                        className="form-check-input"
+                        type="checkbox"
+                        id="gridCheck1"
+                      />
+                      <label className="from-check-label" htmlFor="gridCheck1">
+                        I have already have an account.
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <button className="btn text-danger">{error}</button>
+                </div>
                 <button type="submit" className="btn btn-primary">
-                  Sign in
+                  {isloginchack ? "Log In" : "Register"}
                 </button>
               </form>
             </div>

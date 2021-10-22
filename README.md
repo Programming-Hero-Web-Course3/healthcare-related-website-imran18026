@@ -1,6 +1,6 @@
 # Make a hospital website(SSC academy)
 
-This project was bootstrapped with https://gracious-ritchie-3ec661.netlify.app/
+This project was bootstrapped with https://daily-care-hospital.web.app/
 
 ## Available Scripts
 
@@ -9,4 +9,5 @@ This project was bootstrapped with https://gracious-ritchie-3ec661.netlify.app/
 3.  Then create a list of doctor.
 4.  Then create a firebase google signIn.
 5.  finally create logIn Logout system.
+
 # healthcare-related-website-imran18026

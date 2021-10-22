@@ -6,6 +6,7 @@ import {
   onAuthStateChanged,
   signOut,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 initializeFirebaseApp();
@@ -17,6 +18,12 @@ const useFirebase = () => {
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isloginchack, setisloginchack] = useState(false);
+
+  const haveAnAccount = (e) => {
+    setisloginchack(e.target.checked);
+    console.log(isloginchack);
+  };
 
   const emailHandeler = (e) => {
     setEmail(e.target.value);
@@ -26,12 +33,27 @@ const useFirebase = () => {
   };
 
   const formClickHandeler = (e) => {
-    // console.log(email, password);
-    createUserWithEmailAndPassword(auth, email, password).then((result) => {
-      const user = result.user;
-      // console.log(user);
-    });
+    console.log(email, password);
     e.preventDefault();
+    if (
+      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+        password
+      )
+    ) {
+      setError(
+        "password showed be minimum 8 characters , minimum one special character , minimum one uppercase and one lowercase letter required."
+      );
+      return;
+    } else {
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((result) => {
+          const user = result.user;
+          setError("");
+        })
+        .catch((error) => {
+          setError(error.message);
+        });
+    }
   };
 
   const loginWithGoogle = () => {
@@ -68,6 +90,8 @@ const useFirebase = () => {
     emailHandeler,
     passwordHandeler,
     formClickHandeler,
+    haveAnAccount,
+    isloginchack,
   };
 };
 export default useFirebase;
