@@ -6,6 +6,7 @@ const Login = () => {
     error,
     loginWithGoogle,
     user,
+    nameHandeler,
     formClickHandeler,
     emailHandeler,
     passwordHandeler,
@@ -19,10 +20,29 @@ const Login = () => {
     <div className="mt-5">
       {!user.displayName ? (
         <div>
-          <h1>{isloginchack ? "Please LogIn." : "Please Registered"}</h1>
+          <h1>
+            {isloginchack ? "Please LogIn." : "Please complete Registration"}
+          </h1>
           <div className="container">
             <div className="m-5">
               <form onSubmit={formClickHandeler}>
+                <div className="row mb-3">
+                  <label
+                    htmlFor="inputname3"
+                    className="col-sm-2 col-form-label"
+                  >
+                    Name
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      type="text"
+                      onBlur={nameHandeler}
+                      className="form-control"
+                      id="inputname3"
+                      required
+                    />
+                  </div>
+                </div>
                 <div className="row mb-3">
                   <label
                     htmlFor="inputEmail3"

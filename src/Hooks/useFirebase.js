@@ -17,26 +17,29 @@ const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [isloginchack, setisloginchack] = useState(false);
 
   const haveAnAccount = (e) => {
     setisloginchack(e.target.checked);
-    console.log(isloginchack);
   };
 
   const emailHandeler = (e) => {
     setEmail(e.target.value);
+  };
+  const nameHandeler = (e) => {
+    setName(e.target.value);
   };
   const passwordHandeler = (e) => {
     setPassword(e.target.value);
   };
 
   const formClickHandeler = (e) => {
-    console.log(email, password);
+    console.log(name, email, password);
     e.preventDefault();
     if (
-      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
         password
       )
     ) {
@@ -45,14 +48,17 @@ const useFirebase = () => {
       );
       return;
     } else {
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((result) => {
-          const user = result.user;
-          setError("");
-        })
-        .catch((error) => {
-          setError(error.message);
-        });
+      if (isloginchack === true) {
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((result) => {
+            const user = result.user;
+            console.log(user);
+            setError("");
+          })
+          .catch((error) => {
+            setError(error.message);
+          });
+      }
     }
   };
 
@@ -92,6 +98,7 @@ const useFirebase = () => {
     formClickHandeler,
     haveAnAccount,
     isloginchack,
+    nameHandeler,
   };
 };
 export default useFirebase;
