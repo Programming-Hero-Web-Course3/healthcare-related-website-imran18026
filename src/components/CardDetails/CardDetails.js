@@ -1,12 +1,13 @@
 import React from "react";
+import "./CardDetails.css";
 
 const CardDetails = (Props) => {
-  const { name, image, details } = Props.card;
+  const { name, img, details } = Props.card;
   return (
-    <div className="bg-info">
-      <h1>Details info</h1>
+    <div className="card-style2">
       <h1>{name}</h1>
-      <img src={image} alt="" srcset="" />
+      <img src={`${img}`} alt="" />
+      <br />
       <p>{details}</p>
     </div>
   );
