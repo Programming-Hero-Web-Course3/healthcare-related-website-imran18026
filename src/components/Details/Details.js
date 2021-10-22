@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router";
-
 import React from "react";
-import CardDetails from "../CardDetails/CardDetails";
+import { useEffect, useState } from "react";
+import { Card } from "react-bootstrap";
+import { useParams } from "react-router";
 
 const Details = () => {
   const { serviceId } = useParams();
@@ -21,7 +20,18 @@ const Details = () => {
   }, [details]);
   // console.log(result);
 
-  return <div>{<CardDetails card={result}></CardDetails>}</div>;
+  return (
+    <div className="card-style2">
+      <Card>
+        <img src={result?.img} alt="" />
+        <Card.Header as="h2">{result?.name}</Card.Header>
+        <Card.Body>
+          <h6>5 {result?.details}</h6>
+          <br />
+        </Card.Body>
+      </Card>
+    </div>
+  );
 };
 
 export default Details;
