@@ -99,6 +99,7 @@ const useFirebase = () => {
     haveAnAccount,
     isloginchack,
     nameHandeler,
+    name,
   };
 };
 export default useFirebase;

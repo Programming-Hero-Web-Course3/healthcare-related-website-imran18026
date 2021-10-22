@@ -107,7 +107,7 @@ const Login = () => {
           </button>
         </div>
       ) : (
-        <h1>LogIn Successful ! welcome {user.displayName}</h1>
+        <h1>LogIn Successful ! welcome {user.displayName || user.email}</h1>
       )}
     </div>
   );
