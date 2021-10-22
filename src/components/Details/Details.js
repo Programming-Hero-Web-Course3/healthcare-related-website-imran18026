@@ -26,7 +26,7 @@ const Details = () => {
         <img src={result?.img} alt="" />
         <Card.Header as="h2">{result?.name}</Card.Header>
         <Card.Body>
-          <h6>5 {result?.details}</h6>
+          <h6>{result?.details}</h6>
           <br />
         </Card.Body>
       </Card>
